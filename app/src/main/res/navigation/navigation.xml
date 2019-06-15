@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navigation"
+            app:startDestination="@id/unoFragment">
+
+    <fragment android:id="@+id/unoFragment" android:name="com.example.taller_5.UnoFragment" android:label="fragment_uno"
+              tools:layout="@layout/fragment_uno">
+        <action android:id="@+id/next_fragment" app:destination="@id/dosFragment"/>
+    </fragment>
+    <fragment android:id="@+id/dosFragment" android:name="com.example.taller_5.DosFragment" android:label="fragment_dos"
+              tools:layout="@layout/fragment_dos">
+        <action android:id="@+id/next_fragment" app:destination="@id/tresFragmento"
+                app:popUpToInclusive="false"/>
+    </fragment>
+    <fragment android:id="@+id/tresFragmento" android:name="com.example.taller_5.TresFragmento"
+              android:label="fragment_tres_" tools:layout="@layout/fragment_tres_">
+        <action android:id="@+id/next_fragment" app:destination="@id/cuatroFragment"/>
+    </fragment>
+    <fragment android:id="@+id/cuatroFragment" android:name="com.example.taller_5.CuatroFragment"
+              android:label="fragment_cuatro" tools:layout="@layout/fragment_cuatro">
+        <action android:id="@+id/next_fragment" app:destination="@id/unoFragment"
+                app:popUpTo="@+id/unoFragment"/>
+    </fragment>
+</navigation>
